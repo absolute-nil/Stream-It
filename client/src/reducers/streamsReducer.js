@@ -8,7 +8,7 @@ export default (state=[],action) => {
         case CREATE_STREAM:
             case FETCH_STREAM:
                 case EDIT_STREAM:
-                    return{...state,[action.type]:action.payload};
+                    return{...state,[action.payload.id]:action.payload};
         case DELETE_STREAM:
             return _.omit(state,action.payload)
         case FETCH_STREAMS:
